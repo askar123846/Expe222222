@@ -1,20 +1,14 @@
-[
-  {
-    "id": 1,
-    "amount": 1500.5,
-    "category": "Еда",
-    "date": "2024-05-15"
-  },
-  {
-    "id": 2,
-    "amount": 800.0,
-    "category": "Транспорт",
-    "date": "2024-05-16"
-  },
-  {
-    "id": 3,
-    "amount": 2500.75,
-    "category": "Развлечения",
-    "date": "2024-05-17"
-  }
-]
+
+---
+
+### `expenses_data.json.txt`
+```json
+{
+  "version": 1,
+  "exported_at": "2026-05-04T08:48:00Z",
+  "expenses": [
+    { "amount": 250.0, "category": "еда", "date": "2026-05-01" },
+    { "amount": 120.5, "category": "транспорт", "date": "2026-05-02" },
+    { "amount": 799.0, "category": "развлечения", "date": "2026-05-03" }
+  ]
+}
