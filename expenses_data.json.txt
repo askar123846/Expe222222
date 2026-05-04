@@ -12,3 +12,29 @@
     { "amount": 799.0, "category": "развлечения", "date": "2026-05-03" }
   ]
 }
+import json
+import os
+
+def data_path(filename="books.json"):
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(base_dir, filename)
+
+def save_data(books, path=None):
+    """
+    books: list[dict], например:
+    {"title": "...", "author": "...", "genre": "...", "pages": 123}
+    """
+    if path is None:
+        path = data_path("books.json")
+
+    payload = {
+        "version": 1,
+        "books": books
+    }
+
+    try:
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        # если у вас Tkinter — замените на messagebox.showerror(...)
+        print(f"Ошибка сохранения: {e}")
